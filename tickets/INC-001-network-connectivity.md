@@ -90,3 +90,29 @@ Local connectivity, external connectivity, DNS resolution, and network routing w
 ## Status
 
 Resolved
+
+## Evidence
+
+### Network Configuration
+
+![Network interface configuration](../screenshots/INC-001-ifconfig.png)
+
+The `ifconfig` output confirms that the system had an active network interface and valid IPv4 configuration.
+
+### External Connectivity
+
+![External connectivity test](../screenshots/INC-001-ping.png)
+
+The ping test to 8.8.8.8 completed successfully with no packet loss, confirming external IP connectivity.
+
+### DNS Resolution
+
+![DNS resolution test](../screenshots/INC-001-dns.png)
+
+The `nslookup` test successfully resolved google.com to an IP address, confirming DNS resolution.
+
+### Network Route
+
+![Traceroute network path](../screenshots/INC-001-traceroute.png)
+
+The traceroute command displayed multiple network hops toward the destination, allowing the network path to be examined.
