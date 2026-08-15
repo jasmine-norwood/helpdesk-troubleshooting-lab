@@ -27,23 +27,54 @@ Each incident follows a structured troubleshooting process:
 - PowerShell
 - Networking utilities
 - Virtual machines
+- Windows Server 2025
+- Windows 11 Professional
+- Active Directory Domain Services (AD DS)
+- Active Directory Users and Computers
+- DNS
+- Windows Event Viewer
+- VirtualBox
 
 ## Current Labs
 
-### Network Connectivity
-Diagnose and document basic network connectivity issues.
+### INC-001 — Network Connectivity Troubleshooting
+Diagnosed and documented network connectivity issues using TCP/IP troubleshooting tools.
 
-### DNS Troubleshooting
-Investigate problems involving domain name resolution.
+### INC-002 — DNS Troubleshooting
+Investigated and resolved domain name resolution problems.
 
-### User Account Troubleshooting
-Simulate common password and account access issues.
+### INC-003 — User Account Troubleshooting
+Diagnosed common Windows user account and authentication issues.
 
-### Application Troubleshooting
-Investigate software crashes and application failures.
+### INC-004 — Application Troubleshooting
+Investigated application failures and implemented corrective actions.
 
-### System Performance
-Investigate slow computer performance.
+### INC-005 — System Performance Troubleshooting
+Diagnosed Windows performance issues and identified resource-related problems.
+
+### INC-006 — Windows Support
+Performed structured Windows workstation troubleshooting and documented resolution steps.
+
+### INC-007 — User & System Support
+Investigated end-user workstation issues using Windows administrative and diagnostic tools.
+
+### INC-008 — Windows Troubleshooting
+Diagnosed and resolved Windows operating system issues using a structured help desk methodology.
+
+### INC-009 — Windows Print Spooler Service Troubleshooting
+Investigated a failed Windows Print Spooler service, restored the service, and verified successful operation.
+
+### INC-010 — Disk Space & Storage Troubleshooting
+Investigated low disk space, identified unnecessary files, performed cleanup, and verified recovered storage capacity.
+
+### INC-011 — Application Configuration Troubleshooting
+Investigated an application failure, identified a configuration issue, implemented the correction, and verified successful application operation.
+
+### INC-012 — Active Directory User and Workstation Support
+Built and administered an Active Directory environment, configured AD DS and DNS, managed users and security groups, troubleshot domain connectivity, joined a Windows 11 workstation to the domain, and verified domain-user authentication.
+
+### INC-013 — Active Directory Account Lockout Troubleshooting
+Investigated a locked domain account, analyzed failed authentication attempts and Security Event ID 4740, identified the originating workstation, unlocked the account, and verified successful domain authentication.
 
 ## Skills Demonstrated
 
@@ -55,3 +86,11 @@ Investigate slow computer performance.
 - Technical documentation
 - Incident management
 - Customer support
+- Active Directory administration
+- Windows Server administration
+- Domain authentication troubleshooting
+- Account lockout troubleshooting
+- Security event log analysis
+- PowerShell administration
+- User and security group management
+- Windows domain joins
