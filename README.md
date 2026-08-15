@@ -1,5 +1,32 @@
 # Help Desk Troubleshooting Lab
 
+# IT Support & Help Desk Technical Portfolio
+
+Hands-on IT support portfolio demonstrating practical troubleshooting and 
+administration skills in a Windows enterprise lab environment.
+
+This portfolio documents 15 simulated help desk incidents completed using 
+Windows Server, Windows 11, Active Directory, PowerShell, Group Policy, DNS, 
+SMB, NTFS permissions, and network troubleshooting tools.
+
+Each incident includes the reported issue, troubleshooting methodology, 
+commands and tools used, root cause, resolution, verification, and supporting 
+screenshots.
+
+## Core Technologies
+
+- Windows Server
+- Windows 11
+- Active Directory Domain Services
+- PowerShell
+- Group Policy
+- DNS
+- TCP/IP
+- SMB / Network Shares
+- NTFS Permissions
+- Windows Event Viewer
+- Git & GitHub
+
 ## Overview
 
 This project documents hands-on help desk troubleshooting scenarios designed to demonstrate practical IT support skills.
