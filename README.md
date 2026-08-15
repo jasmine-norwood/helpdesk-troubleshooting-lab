@@ -34,6 +34,9 @@ Each incident follows a structured troubleshooting process:
 - DNS
 - Windows Event Viewer
 - VirtualBox
+- Group Policy Management
+- Group Policy Objects (GPO)
+- SYSVOL
 
 ## Current Labs
 
@@ -76,6 +79,9 @@ Built and administered an Active Directory environment, configured AD DS and DNS
 ### INC-013 — Active Directory Account Lockout Troubleshooting
 Investigated a locked domain account, analyzed failed authentication attempts and Security Event ID 4740, identified the originating workstation, unlocked the account, and verified successful domain authentication.
 
+### INC-014 — Active Directory Group Policy Troubleshooting
+Investigated a Group Policy application issue by validating OU membership, GPO linking, security filtering, client-side policy processing, and SYSVOL accessibility. Resolved the issue and verified successful policy enforcement on a domain-joined Windows 11 workstation.
+
 ## Skills Demonstrated
 
 - IT troubleshooting
@@ -94,3 +100,9 @@ Investigated a locked domain account, analyzed failed authentication attempts an
 - PowerShell administration
 - User and security group management
 - Windows domain joins
+- Group Policy administration
+- GPO troubleshooting
+- GPO scope and linking
+- Group Policy security filtering
+- SYSVOL troubleshooting
+- Policy enforcement verification
