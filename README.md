@@ -1,39 +1,254 @@
-# Help Desk Troubleshooting Lab
-
 # IT Support & Help Desk Technical Portfolio
 
-Hands-on IT support portfolio demonstrating practical troubleshooting and 
-administration skills in a Windows enterprise lab environment.
+Hands-on IT support portfolio demonstrating practical troubleshooting, system administration, and technical support skills in Windows and Linux environments.
 
-This portfolio documents 15 simulated help desk incidents completed using 
-Windows Server, Windows 11, Active Directory, PowerShell, Group Policy, DNS, 
-SMB, NTFS permissions, and network troubleshooting tools.
+This portfolio documents **15 simulated help desk incidents** completed in a virtual lab environment. Each incident follows a structured troubleshooting process including problem identification, information gathering, diagnosis, remediation, verification, and technical documentation.
 
-Each incident includes the reported issue, troubleshooting methodology, 
-commands and tools used, root cause, resolution, verification, and supporting 
-screenshots.
+The lab environment includes **Windows Server, Windows 11, Active Directory Domain Services, PowerShell, Group Policy, DNS, SMB file sharing, NTFS permissions, Linux, networking utilities, Git, and GitHub.**
 
-## Core Technologies
+---
+
+## About This Portfolio
+
+I created this lab to develop and demonstrate practical skills applicable to **Help Desk, Service Desk, Desktop Support, and IT Support Specialist** positions.
+
+Rather than documenting commands alone, each incident is structured around a realistic support problem. The objective is to identify the root cause, implement an appropriate solution, verify functionality, and document the resolution as it would be handled in a professional IT support environment.
+
+Areas of focus include:
+
+- Windows desktop troubleshooting
+- Windows Server administration
+- Active Directory administration
+- User and group management
+- Account lockout investigation
+- Group Policy troubleshooting
+- DNS and network troubleshooting
+- SMB network shares
+- NTFS and share permissions
+- Windows services
+- Event log analysis
+- Linux administration
+- PowerShell
+- Access control and authorization
+- Root-cause analysis
+- Technical documentation
+
+---
+
+# Featured Troubleshooting Projects
+
+These incidents demonstrate some of the more advanced troubleshooting and administrative work completed in the lab.
+
+## Active Directory User Support
+
+Created and administered domain user accounts in Active Directory and verified successful authentication from a domain-joined Windows 11 workstation.
+
+**Skills:** Active Directory, AD DS, PowerShell, Domain Authentication, User Administration
+
+[View INC-012 — Active Directory User Support](tickets/INC-012-active-directory-user-support.md)
+
+---
+
+## Account Lockout Troubleshooting
+
+Reproduced an Active Directory account lockout, investigated authentication failures, analyzed Windows Security Event logs, identified the affected account and originating workstation, restored account access, and verified successful authentication.
+
+**Skills:** Active Directory, Account Lockouts, Event Viewer, PowerShell, Authentication Troubleshooting
+
+[View INC-013 — Account Lockout Troubleshooting](tickets/INC-013-account-lockout-troubleshooting.md)
+
+---
+
+## Group Policy Troubleshooting
+
+Investigated a Group Policy issue affecting a domain user. Verified OU placement, GPO linking, permissions, SYSVOL accessibility, policy processing, and the resulting workstation restriction.
+
+**Skills:** Group Policy, Active Directory, PowerShell, SYSVOL, Event Logs, Windows Administration
+
+[View INC-014 — Group Policy Troubleshooting](tickets/INC-014-group-policy-troubleshooting.md)
+
+---
+
+## Shared Folder & NTFS Permissions Troubleshooting
+
+Diagnosed an **Access Denied** issue affecting an SMB departmental share. Verified network connectivity, SMB configuration, share permissions, NTFS permissions, and Active Directory security-group membership.
+
+The root cause was identified as missing membership in the authorized AD security group. Access was restored and both read and modify permissions were verified.
+
+**Skills:** SMB, NTFS Permissions, Active Directory Security Groups, PowerShell, Access Control, Authentication vs. Authorization
+
+[View INC-015 — Shared Folder Permissions Troubleshooting](tickets/INC-015-shared-folder-permissions-troubleshooting.md)
+
+---
+
+# Help Desk Incident Labs
+
+| Incident | Scenario | Primary Skills |
+|---|---|---|
+| [INC-001](tickets/INC-001-network-connectivity.md) | Network Connectivity Troubleshooting | TCP/IP, Connectivity Testing, Network Diagnostics |
+| [INC-002](tickets/INC-002-dns-troubleshooting.md) | DNS Troubleshooting | DNS, Name Resolution, Network Diagnostics |
+| [INC-003](tickets/INC-003-system-performance.md) | System Performance Troubleshooting | Performance Analysis, Resource Troubleshooting |
+| [INC-004](tickets/INC-004-linux-user-permissions.md) | Linux User Permissions | Linux, Users, Groups, File Permissions |
+| [INC-005](tickets/INC-005-software-troubleshooting.md) | Software Troubleshooting | Application Support, Root-Cause Analysis |
+| [INC-006](tickets/INC-006-linux-service-troubleshooting.md) | Linux Service Troubleshooting | Linux Services, Service Management, Diagnostics |
+| [INC-007](tickets/INC-007-windows-user-account.md) | Windows User Account Troubleshooting | Windows Accounts, User Support |
+| [INC-008](tickets/INC-008-windows-network-dns.md) | Windows Network & DNS Troubleshooting | Windows Networking, DNS, TCP/IP |
+| [INC-009](tickets/INC-009-windows-print-spooler.md) | Print Spooler Troubleshooting | Windows Services, Print Support, PowerShell |
+| [INC-010](tickets/INC-010-low-disk-space.md) | Low Disk Space Troubleshooting | Storage, Disk Cleanup, System Performance |
+| [INC-011](tickets/INC-011-application-event-log.md) | Application & Event Log Troubleshooting | Event Viewer, Application Support, Log Analysis |
+| [INC-012](tickets/INC-012-active-directory-user-support.md) | Active Directory User Support | AD DS, Users, Groups, Domain Authentication |
+| [INC-013](tickets/INC-013-account-lockout-troubleshooting.md) | Account Lockout Troubleshooting | Active Directory, Security Events, Authentication |
+| [INC-014](tickets/INC-014-group-policy-troubleshooting.md) | Group Policy Troubleshooting | GPO, OU Scope, SYSVOL, Policy Processing |
+| [INC-015](tickets/INC-015-shared-folder-permissions-troubleshooting.md) | Shared Folder Access Troubleshooting | SMB, NTFS, AD Groups, Authorization |
+
+---
+
+# Lab Environment
+
+The later Windows enterprise-support scenarios use a virtual Active Directory domain environment.
+
+```text
+                    corp.jasmine.lab
+                           |
+                    IT-LAB-DC01
+                    Windows Server
+                           |
+        +------------------+------------------+
+        |                  |                  |
+ Active Directory         DNS           Group Policy
+        |                                     |
+        |                                     |
+        +---------------+---------------------+
+                        |
+                 IT-LAB-WIN11
+                   Windows 11
+                        |
+                 Domain Users
+                        |
+             Help Desk Troubleshooting
+```
+
+This environment allows troubleshooting scenarios involving both the **server and endpoint sides** of common enterprise IT issues.
+
+---
+
+# Technical Skills Demonstrated
+
+## Active Directory
+
+- Active Directory Domain Services (AD DS)
+- Domain user administration
+- Security group administration
+- Organizational Units (OUs)
+- Password resets
+- Account unlocks
+- Group membership management
+- Domain authentication
+- Domain-joined workstations
+- Distinguished Names
+- Security identifiers and Windows security tokens
+
+## Windows Administration
+
+- Windows Server
+- Windows 11
+- PowerShell
+- Windows Services
+- Event Viewer
+- User account troubleshooting
+- Application troubleshooting
+- Disk-space troubleshooting
+- File and folder permissions
+- Remote resource troubleshooting
+
+## Group Policy
+
+- Group Policy Objects (GPOs)
+- GPO creation and configuration
+- OU linking
+- Group Policy inheritance
+- Security filtering
+- Policy processing
+- `gpupdate`
+- `gpresult`
+- SYSVOL verification
+- Group Policy event investigation
+
+## Networking
+
+- TCP/IP fundamentals
+- DNS
+- Name resolution
+- ICMP connectivity testing
+- TCP port testing
+- SMB
+- UNC paths
+- Network share troubleshooting
+- Client/server connectivity
+
+Tools used include:
+
+```text
+ping
+ipconfig
+nslookup
+Test-NetConnection
+```
+
+## Access & Permissions
+
+- NTFS permissions
+- SMB share permissions
+- Active Directory security groups
+- Group-based resource authorization
+- Authentication vs. authorization
+- Least-privilege access concepts
+- Windows security-token verification
+
+## Linux
+
+- Linux user administration
+- File permissions
+- Service troubleshooting
+- Command-line troubleshooting
+
+## Troubleshooting & Support
+
+- Problem identification
+- Information gathering
+- Issue reproduction
+- Root-cause analysis
+- Hypothesis testing
+- Corrective action
+- Resolution verification
+- Escalation awareness
+- Incident documentation
+- Technical communication
+
+---
+
+# Tools & Technologies
 
 - Windows Server
 - Windows 11
 - Active Directory Domain Services
+- Group Policy Management
 - PowerShell
-- Group Policy
-- DNS
-- TCP/IP
-- SMB / Network Shares
-- NTFS Permissions
 - Windows Event Viewer
-- Git & GitHub
+- DNS
+- SMB
+- NTFS
+- TCP/IP
+- Linux
+- VMware
+- Visual Studio Code
+- Git
+- GitHub
+- macOS Terminal
 
-## Overview
+---
 
-This project documents hands-on help desk troubleshooting scenarios designed to demonstrate practical IT support skills.
-
-The lab focuses on diagnosing common technical problems, identifying root causes, applying solutions, and documenting the resolution.
-
-## Troubleshooting Methodology
+# Troubleshooting Methodology
 
 Each incident follows a structured troubleshooting process:
 
@@ -41,108 +256,93 @@ Each incident follows a structured troubleshooting process:
 2. Gather information
 3. Establish a probable cause
 4. Test the suspected cause
-5. Implement a solution
-6. Verify the solution
-7. Document the resolution
+5. Implement an appropriate solution
+6. Verify full system functionality
+7. Document findings and resolution
 
-## Technologies and Tools
+This approach emphasizes understanding **why an issue occurred**, rather than simply applying a fix.
 
-- macOS Terminal
-- Git
-- GitHub
-- Visual Studio Code
+---
+
+# Example Troubleshooting Workflow
+
+A typical incident may involve:
+
+```text
+User reports issue
+        |
+        v
+Reproduce problem
+        |
+        v
+Verify connectivity/system state
+        |
+        v
+Gather diagnostic information
+        |
+        v
+Identify probable cause
+        |
+        v
+Test hypothesis
+        |
+        v
+Implement resolution
+        |
+        v
+Verify functionality
+        |
+        v
+Document incident
+```
+
+---
+
+# Technical Documentation
+
+Each incident ticket may include:
+
+- Ticket summary
+- User impact
+- Environment information
+- Symptoms
+- Diagnostic commands
+- Troubleshooting process
+- Root cause
+- Resolution
+- Verification
+- Screenshots
+- Skills demonstrated
+
+Screenshots are maintained within the repository as supporting evidence of the troubleshooting process.
+
+---
+
+# Professional Development
+
+**CompTIA Security+ — In Progress**
+
+Continuing to develop skills in:
+
+- IT support
+- Windows administration
+- Active Directory
+- Networking
+- Cybersecurity fundamentals
 - PowerShell
-- Networking utilities
-- Virtual machines
-- Windows Server 2025
-- Windows 11 Professional
-- Active Directory Domain Services (AD DS)
-- Active Directory Users and Computers
-- DNS
-- Windows Event Viewer
-- VirtualBox
-- Group Policy Management
-- Group Policy Objects (GPO)
-- SYSVOL
-- SMB file sharing
-- NTFS permissions
-- SYSVOL
-- TCP/IP networking
+- Enterprise troubleshooting
 
-## Current Labs
+---
 
-### INC-001 — Network Connectivity Troubleshooting
-Diagnosed and documented network connectivity issues using TCP/IP troubleshooting tools.
+# Career Focus
 
-### INC-002 — DNS Troubleshooting
-Investigated and resolved domain name resolution problems.
+I am currently pursuing opportunities in:
 
-### INC-003 — User Account Troubleshooting
-Diagnosed common Windows user account and authentication issues.
+- Help Desk / Service Desk
+- IT Support
+- Technical Support
+- Desktop Support
+- Tier 1 Support
+- Junior IT Support
 
-### INC-004 — Application Troubleshooting
-Investigated application failures and implemented corrective actions.
-
-### INC-005 — System Performance Troubleshooting
-Diagnosed Windows performance issues and identified resource-related problems.
-
-### INC-006 — Windows Support
-Performed structured Windows workstation troubleshooting and documented resolution steps.
-
-### INC-007 — User & System Support
-Investigated end-user workstation issues using Windows administrative and diagnostic tools.
-
-### INC-008 — Windows Troubleshooting
-Diagnosed and resolved Windows operating system issues using a structured help desk methodology.
-
-### INC-009 — Windows Print Spooler Service Troubleshooting
-Investigated a failed Windows Print Spooler service, restored the service, and verified successful operation.
-
-### INC-010 — Disk Space & Storage Troubleshooting
-Investigated low disk space, identified unnecessary files, performed cleanup, and verified recovered storage capacity.
-
-### INC-011 — Application Configuration Troubleshooting
-Investigated an application failure, identified a configuration issue, implemented the correction, and verified successful application operation.
-
-### INC-012 — Active Directory User and Workstation Support
-Built and administered an Active Directory environment, configured AD DS and DNS, managed users and security groups, troubleshot domain connectivity, joined a Windows 11 workstation to the domain, and verified domain-user authentication.
-
-### INC-013 — Active Directory Account Lockout Troubleshooting
-Investigated a locked domain account, analyzed failed authentication attempts and Security Event ID 4740, identified the originating workstation, unlocked the account, and verified successful domain authentication.
-
-### INC-014 — Active Directory Group Policy Troubleshooting
-Investigated a Group Policy application issue by validating OU membership, GPO linking, security filtering, client-side policy processing, and SYSVOL accessibility. Resolved the issue and verified successful policy enforcement on a domain-joined Windows 11 workstation.
-
-### INC-015 — Shared Folder & NTFS Permissions Troubleshooting
-Diagnosed an Access Denied issue affecting a departmental SMB network share. Verified network connectivity, share permissions, NTFS permissions, and Active Directory group membership; identified missing security-group membership as the root cause; restored access and verified read and modify permissions.
-
-## Skills Demonstrated
-
-- IT troubleshooting
-- Network diagnostics
-- TCP/IP fundamentals
-- DNS troubleshooting
-- Root cause analysis
-- Technical documentation
-- Incident management
-- Customer support
-- Active Directory administration
-- Windows Server administration
-- Domain authentication troubleshooting
-- Account lockout troubleshooting
-- Security event log analysis
-- PowerShell administration
-- User and security group management
-- Windows domain joins
-- Group Policy administration
-- GPO troubleshooting
-- GPO scope and linking
-- Group Policy security filtering
-- SYSVOL troubleshooting
-- Policy enforcement verification
-- User and group administration
-- Group Policy administration and troubleshooting
-- NTFS and share permission troubleshooting
-- SMB and UNC path troubleshooting
-- Windows Event Log analysis
-- Authentication and authorization troubleshooting
+This portfolio will continue to evolve as I expand my hands-on experience with enterprise IT technologies and troubleshooting scenarios.
