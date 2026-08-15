@@ -37,6 +37,10 @@ Each incident follows a structured troubleshooting process:
 - Group Policy Management
 - Group Policy Objects (GPO)
 - SYSVOL
+- SMB file sharing
+- NTFS permissions
+- SYSVOL
+- TCP/IP networking
 
 ## Current Labs
 
@@ -82,6 +86,9 @@ Investigated a locked domain account, analyzed failed authentication attempts an
 ### INC-014 — Active Directory Group Policy Troubleshooting
 Investigated a Group Policy application issue by validating OU membership, GPO linking, security filtering, client-side policy processing, and SYSVOL accessibility. Resolved the issue and verified successful policy enforcement on a domain-joined Windows 11 workstation.
 
+### INC-015 — Shared Folder & NTFS Permissions Troubleshooting
+Diagnosed an Access Denied issue affecting a departmental SMB network share. Verified network connectivity, share permissions, NTFS permissions, and Active Directory group membership; identified missing security-group membership as the root cause; restored access and verified read and modify permissions.
+
 ## Skills Demonstrated
 
 - IT troubleshooting
@@ -106,3 +113,9 @@ Investigated a Group Policy application issue by validating OU membership, GPO l
 - Group Policy security filtering
 - SYSVOL troubleshooting
 - Policy enforcement verification
+- User and group administration
+- Group Policy administration and troubleshooting
+- NTFS and share permission troubleshooting
+- SMB and UNC path troubleshooting
+- Windows Event Log analysis
+- Authentication and authorization troubleshooting
